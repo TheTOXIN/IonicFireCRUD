@@ -8,8 +8,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <app-crud *ngIf="folder == 'crud'"></app-crud>
-    <app-info *ngIf="folder == 'info'"></app-info>
-  </div>
+  <app-crud *ngIf="folder == 'crud'"></app-crud>
+  <app-info *ngIf="folder == 'info'"></app-info>
 </ion-content>
