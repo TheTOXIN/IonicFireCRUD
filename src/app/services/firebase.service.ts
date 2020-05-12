@@ -16,25 +16,25 @@ export class FirebaseService {
 
   create(record) {
     return this.firestore
-        .collection(this.collection)
-        .add(record);
+      .collection(this.collection)
+      .add(record);
   }
 
   read() {
     return this.firestore
-        .collection(this.collection)
-        .snapshotChanges();
+      .collection(this.collection)
+      .snapshotChanges();
   }
 
   update(recordId, record) {
     this.firestore
-        .doc(this.collection + '/' + recordId)
-        .update(record);
+      .doc(this.collection + '/' + recordId)
+      .update(record);
   }
 
   delete(recordId) {
     this.firestore
-        .doc(this.collection + '/' + recordId)
-        .delete();
+      .doc(this.collection + '/' + recordId)
+      .delete();
   }
 }
