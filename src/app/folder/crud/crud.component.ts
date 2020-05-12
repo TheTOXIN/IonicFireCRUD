@@ -33,6 +33,10 @@ export class CrudComponent implements OnInit {
       address: ['', [Validators.required]]
     });
 
+    this.read();
+  }
+
+  read() {
     this.firebaseService.read().subscribe(data => {
       this.studentList = data.map(e => {
         return {

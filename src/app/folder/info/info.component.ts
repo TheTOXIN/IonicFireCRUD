@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {}
 
+  toGitHub() {
+    window.location.href = 'https://github.com/TheTOXIN/IonicFireCRUD';
+  }
 }
